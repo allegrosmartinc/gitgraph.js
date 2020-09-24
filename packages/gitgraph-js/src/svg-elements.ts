@@ -71,6 +71,7 @@ function createG(options: GOptions): SVGGElement {
   if (options.fill) {
     g.setAttribute("fill", options.fill);
   }
+  g.setAttribute("fill", options.fill);
 
   if (options.stroke) {
     g.setAttribute("stroke", options.stroke);
@@ -83,6 +84,9 @@ function createG(options: GOptions): SVGGElement {
   if (options.onClick) {
     g.addEventListener("click", options.onClick);
   }
+  g.addEventListener("click", function() {
+    window.alert("aaaa");
+  });
 
   if (options.onMouseOver) {
     g.addEventListener("mouseover", options.onMouseOver);
